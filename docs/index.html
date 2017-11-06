@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TreeLibrary: Файл Tree.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tree.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TreeLibrary
+   </div>
+   <div id="projectbrief">Level Up C Tree</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Структуры данных</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Tree.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Структуры данных</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhuman.html">human</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structblock.html">block</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:af08ec37a8c99d747fb60fa15bc28678b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#af08ec37a8c99d747fb60fa15bc28678b">_CRT_SECURE_NO_WARNINGS</a></td></tr>
+<tr class="separator:af08ec37a8c99d747fb60fa15bc28678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5023ef9061be8981a8b975feb3df5e6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a5023ef9061be8981a8b975feb3df5e6e">MEN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5023ef9061be8981a8b975feb3df5e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d10d46335cd2e6023f943eb5983e07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a76d10d46335cd2e6023f943eb5983e07">WOMEN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a76d10d46335cd2e6023f943eb5983e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aa0d4c1d4d3cf88586e3bf967354ad9ff"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structhuman.html">human</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#aa0d4c1d4d3cf88586e3bf967354ad9ff">createHuman</a> (char *name, char *dateOfBirth, int age, float payment, char sex)</td></tr>
+<tr class="memdesc:aa0d4c1d4d3cf88586e3bf967354ad9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">createHuman - создание структуры для хранения в дереве  <a href="#aa0d4c1d4d3cf88586e3bf967354ad9ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa0d4c1d4d3cf88586e3bf967354ad9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c38db95154dab41787ffe80d7d457ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a1c38db95154dab41787ffe80d7d457ea">clearHuman</a> (struct <a class="el" href="structhuman.html">human</a> *<a class="el" href="structhuman.html">human</a>)</td></tr>
+<tr class="memdesc:a1c38db95154dab41787ffe80d7d457ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">clearHuman - удаление структуры  <a href="#a1c38db95154dab41787ffe80d7d457ea">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c38db95154dab41787ffe80d7d457ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf9baf49417d055b6d4340112725d92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a2cf9baf49417d055b6d4340112725d92">outHuman</a> (struct <a class="el" href="structhuman.html">human</a> *<a class="el" href="structhuman.html">human</a>, int level)</td></tr>
+<tr class="memdesc:a2cf9baf49417d055b6d4340112725d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">outHuman - вывод структуры в консоль  <a href="#a2cf9baf49417d055b6d4340112725d92">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cf9baf49417d055b6d4340112725d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0132ebaeb365df31f176861c653f7a79"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a0132ebaeb365df31f176861c653f7a79">humanCompare</a> (struct <a class="el" href="structhuman.html">human</a> *human1, struct <a class="el" href="structhuman.html">human</a> *human2)</td></tr>
+<tr class="memdesc:a0132ebaeb365df31f176861c653f7a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">humanCompare - сравнение двух структур  <a href="#a0132ebaeb365df31f176861c653f7a79">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0132ebaeb365df31f176861c653f7a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5393f230d32003da079d78bb16875cae"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structblock.html">block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a5393f230d32003da079d78bb16875cae">create</a> (struct <a class="el" href="structhuman.html">human</a> *value)</td></tr>
+<tr class="memdesc:a5393f230d32003da079d78bb16875cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">create - создание блока (ячейки)  <a href="#a5393f230d32003da079d78bb16875cae">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5393f230d32003da079d78bb16875cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8175dff3ad701ee29e38e65f43a950f7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a8175dff3ad701ee29e38e65f43a950f7">add</a> (struct <a class="el" href="structblock.html">block</a> *root, struct <a class="el" href="structblock.html">block</a> *newBlock)</td></tr>
+<tr class="memdesc:a8175dff3ad701ee29e38e65f43a950f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">add - добавление элемента в дерево  <a href="#a8175dff3ad701ee29e38e65f43a950f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8175dff3ad701ee29e38e65f43a950f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9928cff9b035315b37a0819de356c89b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a9928cff9b035315b37a0819de356c89b">find</a> (struct <a class="el" href="structblock.html">block</a> *root, struct <a class="el" href="structhuman.html">human</a> *value)</td></tr>
+<tr class="memdesc:a9928cff9b035315b37a0819de356c89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">find - поиск элемента в дереве  <a href="#a9928cff9b035315b37a0819de356c89b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9928cff9b035315b37a0819de356c89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f7e59335c5e9fe5334d80f06efb768"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a39f7e59335c5e9fe5334d80f06efb768">out</a> (struct <a class="el" href="structblock.html">block</a> *root, int level)</td></tr>
+<tr class="memdesc:a39f7e59335c5e9fe5334d80f06efb768"><td class="mdescLeft">&#160;</td><td class="mdescRight">out - вывод дерева  <a href="#a39f7e59335c5e9fe5334d80f06efb768">Подробнее...</a><br /></td></tr>
+<tr class="separator:a39f7e59335c5e9fe5334d80f06efb768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1e67f4f2beaec3ac5174b59a3cfe9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a6d1e67f4f2beaec3ac5174b59a3cfe9b">del</a> (struct <a class="el" href="structblock.html">block</a> *root, struct <a class="el" href="structhuman.html">human</a> *value)</td></tr>
+<tr class="memdesc:a6d1e67f4f2beaec3ac5174b59a3cfe9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">del - удаление блока из дерева  <a href="#a6d1e67f4f2beaec3ac5174b59a3cfe9b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d1e67f4f2beaec3ac5174b59a3cfe9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60228fe63b8fc87c1c63aa10949ccfb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#a60228fe63b8fc87c1c63aa10949ccfb7">clear</a> (struct <a class="el" href="structblock.html">block</a> *root)</td></tr>
+<tr class="memdesc:a60228fe63b8fc87c1c63aa10949ccfb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear - удаление дерева  <a href="#a60228fe63b8fc87c1c63aa10949ccfb7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a60228fe63b8fc87c1c63aa10949ccfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdef7a1fd863a6d3770c1268cb06add3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tree_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a> ()</td></tr>
+<tr class="separator:acdef7a1fd863a6d3770c1268cb06add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="af08ec37a8c99d747fb60fa15bc28678b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08ec37a8c99d747fb60fa15bc28678b">&#9670;&nbsp;</a></span>_CRT_SECURE_NO_WARNINGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _CRT_SECURE_NO_WARNINGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa93f0eb578d23995850d61f7d61c55c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93f0eb578d23995850d61f7d61c55c1">&#9670;&nbsp;</a></span>FALSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5023ef9061be8981a8b975feb3df5e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5023ef9061be8981a8b975feb3df5e6e">&#9670;&nbsp;</a></span>MEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MEN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cecfc5c5c054d2875c03e77b7be15d">&#9670;&nbsp;</a></span>TRUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRUE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Переопределение слов TRUE и FALSE как 1 и 0 соответсвенно (так как в языке C нету типа bool) </p>
+
+</div>
+</div>
+<a id="a76d10d46335cd2e6023f943eb5983e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d10d46335cd2e6023f943eb5983e07">&#9670;&nbsp;</a></span>WOMEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WOMEN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a8175dff3ad701ee29e38e65f43a950f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8175dff3ad701ee29e38e65f43a950f7">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char add </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structblock.html">block</a> *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structblock.html">block</a> *&#160;</td>
+          <td class="paramname"><em>newBlock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add - добавление элемента в дерево </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>- корень дерева </td></tr>
+    <tr><td class="paramname">newBlock</td><td>- новый блок для добавления </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- получилось ли добавление? </dd></dl>
+
+</div>
+</div>
+<a id="a60228fe63b8fc87c1c63aa10949ccfb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60228fe63b8fc87c1c63aa10949ccfb7">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structblock.html">block</a> *&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clear - удаление дерева </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>- корень дерева </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1c38db95154dab41787ffe80d7d457ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c38db95154dab41787ffe80d7d457ea">&#9670;&nbsp;</a></span>clearHuman()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearHuman </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>human</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clearHuman - удаление структуры </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">human</td><td>- указатель на структуру, которую нужно удалить </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5393f230d32003da079d78bb16875cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5393f230d32003da079d78bb16875cae">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structblock.html">block</a>* create </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>create - создание блока (ячейки) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>- значение блока (структура) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- указатель на созданный блок дерева </dd></dl>
+
+</div>
+</div>
+<a id="aa0d4c1d4d3cf88586e3bf967354ad9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d4c1d4d3cf88586e3bf967354ad9ff">&#9670;&nbsp;</a></span>createHuman()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structhuman.html">human</a>* createHuman </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dateOfBirth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>age</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>payment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>createHuman - создание структуры для хранения в дереве </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- имя </td></tr>
+    <tr><td class="paramname">dateOfBirth</td><td>- дата рождения </td></tr>
+    <tr><td class="paramname">age</td><td>- возраст </td></tr>
+    <tr><td class="paramname">payment</td><td>- зарплата </td></tr>
+    <tr><td class="paramname">sex</td><td>- пол </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- указатель на созданную структуру для хранения </dd></dl>
+
+</div>
+</div>
+<a id="a6d1e67f4f2beaec3ac5174b59a3cfe9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1e67f4f2beaec3ac5174b59a3cfe9b">&#9670;&nbsp;</a></span>del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void del </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structblock.html">block</a> *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>del - удаление блока из дерева </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>- корень дерева </td></tr>
+    <tr><td class="paramname">value</td><td>- значение, которое нужно удалить из дерева </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9928cff9b035315b37a0819de356c89b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9928cff9b035315b37a0819de356c89b">&#9670;&nbsp;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char find </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structblock.html">block</a> *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>find - поиск элемента в дереве </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>- корень дерева </td></tr>
+    <tr><td class="paramname">value</td><td>- искомое значение(структура) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- хранится ли данное значение в дереве? </dd></dl>
+
+</div>
+</div>
+<a id="a0132ebaeb365df31f176861c653f7a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0132ebaeb365df31f176861c653f7a79">&#9670;&nbsp;</a></span>humanCompare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char humanCompare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>human1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>human2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>humanCompare - сравнение двух структур </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">human1</td><td>- 1-ая структура </td></tr>
+    <tr><td class="paramname">human2</td><td>- 2-ая структура </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- 1 - Если 1-ая структура больше второй 0 - Если 2-ая структура меньше второй -1 - Если они одинаковые </dd></dl>
+
+</div>
+</div>
+<a id="acdef7a1fd863a6d3770c1268cb06add3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdef7a1fd863a6d3770c1268cb06add3">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39f7e59335c5e9fe5334d80f06efb768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f7e59335c5e9fe5334d80f06efb768">&#9670;&nbsp;</a></span>out()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void out </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structblock.html">block</a> *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>out - вывод дерева </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>- корень дерева (поддерева) </td></tr>
+    <tr><td class="paramname">level</td><td>- уровень глубины текущего поддерева </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2cf9baf49417d055b6d4340112725d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf9baf49417d055b6d4340112725d92">&#9670;&nbsp;</a></span>outHuman()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outHuman </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structhuman.html">human</a> *&#160;</td>
+          <td class="paramname"><em>human</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>outHuman - вывод структуры в консоль </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">human</td><td>- указатель на структуру </td></tr>
+    <tr><td class="paramname">level</td><td>- уровень в дереве </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

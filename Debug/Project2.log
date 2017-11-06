@@ -1,0 +1,8 @@
+﻿  List.c
+c:\users\alexey\source\repos\project2\project2\list.c(407): warning C4305: функция: усечение из "double" в "float"
+c:\users\alexey\source\repos\project2\project2\list.c(408): warning C4305: функция: усечение из "double" в "float"
+c:\users\alexey\source\repos\project2\project2\list.c(409): warning C4305: функция: усечение из "double" в "float"
+c:\users\alexey\source\repos\project2\project2\list.c(410): warning C4305: функция: усечение из "double" в "float"
+c:\users\alexey\source\repos\project2\project2\list.c(411): warning C4305: функция: усечение из "double" в "float"
+c:\users\alexey\source\repos\project2\project2\list.c(417): warning C4305: функция: усечение из "double" в "float"
+  Project2.vcxproj -> C:\Users\Alexey\Source\Repos\Project2\Debug\Project2.exe
